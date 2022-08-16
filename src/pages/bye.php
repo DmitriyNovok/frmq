@@ -1,4 +1,1 @@
-<?php
-
-$response->setContent('Goodbye!');
-$response->send();
+Goodbye <?php echo htmlspecialchars(isset($param) ? $param : 'User!', ENT_QUOTES, 'UTF-8') ?>
