@@ -6,14 +6,6 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing;
 
-function render_template($request)
-{
-    extract($request->attributes->all(), EXTR_SKIP);
-    ob_start();
-    require_once sprintf(__DIR__.'/../src/pages/%s.php', $_route);
-    return new Response(ob_get_clean());
-}
-
 $request = Request::createFromGlobals();
 $routes = require_once __DIR__.'/../src/app.php';
 
