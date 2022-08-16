@@ -21,16 +21,6 @@ $context = new Routing\RequestContext();
 $context->fromRequest($request);
 $matcher = new Routing\Matcher\UrlMatcher($routes, $context);
 
-$routes->add(
-    'hello',
-    new Routing\Route('/hello/{name}', [
-        'name' => 'World',
-        '_controller' => function () use($request) {
-            return render_template($request);
-        },
-    ])
-);
-
 try {
     $request->attributes->add($matcher->match($request->getPathInfo()));
     $response = call_user_func($request->attributes->get('_controller'), $request);
