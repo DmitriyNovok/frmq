@@ -1,6 +1,6 @@
 <?php
 
-namespace Calendar\Controller;
+namespace Calendar\Controllers;
 
 use Calendar\Model\LeapYear;
 use Symfony\Component\HttpFoundation\Response;
