@@ -1,6 +1,6 @@
 <?php
 
-namespace Frmq;
+namespace App;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -9,7 +9,7 @@ use Symfony\Component\HttpKernel\Controller\ControllerResolver;
 use Symfony\Component\Routing\Exception\ResourceNotFoundException;
 use Symfony\Component\Routing\Matcher\UrlMatcher;
 
-class Engine
+class App
 {
     public function __construct(
         protected UrlMatcher $matcher,
