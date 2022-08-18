@@ -4,5 +4,9 @@
         "symfony/dependency-injection": "^6.1",
         "symfony/routing": "^6.1",
         "symfony/http-kernel": "^6.1"
+    },
+
+    "autoload": {
+        "psr-4": { "": "src/" }
     }
 }
